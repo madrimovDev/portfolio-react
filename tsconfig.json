@@ -17,17 +17,17 @@
 		"jsx": "react-jsx",
 		"baseUrl": "./",
 		"paths": {
-			"@contexts": ["./src/contexts"],
-			"@components": ["./src/components"],
-			"@providers": ["./src/providers"],
-			"@services": ["./src/services"],
-			"@routers": ["./src/routers"],
-			"@pages": ["./src/pages"],
-			"@api": ["./src/api"],
-			"@store": ["./src/store"],
-			"@hooks": ["./src/hooks"],
-			"@utils": ["./src/utils"],
-			"@assets/*": ["./src/assets/*"]
+			"@/contexts": ["./src/contexts"],
+			"@/components": ["./src/components"],
+			"@/providers": ["./src/providers"],
+			"@/services": ["./src/services"],
+			"@/routers": ["./src/routers"],
+			"@/pages": ["./src/pages"],
+			"@/api": ["./src/api"],
+			"@/store": ["./src/store"],
+			"@/hooks": ["./src/hooks"],
+			"@/utils": ["./src/utils"],
+			"@/assets": ["./src/assets"]
 		}
 	},
 	"include": ["src"],
