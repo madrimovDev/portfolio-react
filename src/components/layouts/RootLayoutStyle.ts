@@ -6,6 +6,8 @@ const MainStyle = styled('main')`
 	height: calc(100% - 10vh);
 	display: flex;
 	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
 `
 
 const RootLayoutStyle = styled.div`
