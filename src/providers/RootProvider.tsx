@@ -7,7 +7,6 @@ import { store } from '@/store'
 import { GlobalStyle, theme } from '@/assets'
 import { ThemeProvider } from '@emotion/react'
 
-
 const RootProvider: FC = () => {
 	return (
 		<>
