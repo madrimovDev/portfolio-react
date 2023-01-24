@@ -1,9 +1,11 @@
-import React, { FC } from 'react'
-import SidebarStyle, { Divider, SidebarWrapper } from './SidebarStyle'
+import React, { FC, useLayoutEffect, useRef, useState } from 'react'
+import SidebarStyle, { Divider, SidebarWrapper, SoftSkills } from './SidebarStyle'
 import SidebarHeader from './SidebarHeader'
 import SidebarInfo from './SidebarInfo'
 import CircleRange from './circleRange/CircleRange'
 import LineRange from './lineRange/LineRange'
+
+import CheckOutlined from '@ant-design/icons/CheckOutlined'
 
 const sidebarData = {
 	languages: [
@@ -42,15 +44,12 @@ const sidebarData = {
 			value: 90
 		}
 	],
-	softSkills: [
-		'Bootsrap, Tailwind, Ant-Design, Material-UI',
-		'Sass/Scss, PostCSS',
-		'GULP, Webpack',
-		'Git, Github'
-	]
+	softSkills: ['Bootsrap, Tailwind, Ant-Design, Material-UI', 'Sass/Scss, PostCSS', 'GULP, Webpack', 'Git, Github']
 }
 
 const Sidebar: FC = () => {
+	const ref = useRef<HTMLDivElement>(null)
+
 	return (
 		<SidebarStyle>
 			<SidebarHeader />
@@ -82,7 +81,15 @@ const Sidebar: FC = () => {
 					))}
 				</div>
 				<Divider />
-				
+				<SoftSkills>
+					{sidebarData.softSkills.map((data) => (
+						<li key={data}>
+							<CheckOutlined />
+							<span className='name'>{data}</span>
+						</li>
+					))}
+				</SoftSkills>
+				<Divider />
 			</SidebarWrapper>
 		</SidebarStyle>
 	)

@@ -7,7 +7,6 @@ const SidebarStyle = styled('aside')`
 	box-shadow: 2px 0px 6px rgba(0, 0, 0, 0.1);
 	z-index: 11;
 `
-
 export const SidebarHeaderStyle = styled('div')`
 	background: ${(props) => props.theme.colors.accentBgColor};
 	padding: 30px;
@@ -38,6 +37,8 @@ export const SidebarWrapper = styled('div')`
 	display: flex;
 	flex-direction: column;
 	gap: 30px;
+	border: 1px solid red;
+	overflow-y: scroll;
 `
 export const SidebarInfoStyle = styled('div')`
 	& li {
@@ -54,12 +55,25 @@ export const SidebarInfoStyle = styled('div')`
 		}
 	}
 `
-
 export const Divider = styled('div')`
 	width: 100%;
 	height: 1px;
 	border-radius: 10px;
 	background: rgba(255, 255, 255, 0.1);
 `
+export const SoftSkills = styled.ul({
+	li: {
+		display: 'flex',
+		alignItems: 'center',
+		gap: 10,
+		color: 'orange',
+		fontSize: 12,
+		whiteSpace: 'nowrap',
+		overflow: 'hidden',
+		'span.name': {
+			color: '#8e8e8e'
+		}
+	}
+})
 
 export default SidebarStyle
