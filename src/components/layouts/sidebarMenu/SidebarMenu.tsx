@@ -10,7 +10,7 @@ const SidebarMenu = () => {
 	const [isShow, setIsShow] = useState<boolean>(false)
 	const toggleShow = () => setIsShow((prev) => !prev)
 	const ref = useRef<HTMLDivElement>(null)
-	
+
 	useOutsideClick(ref, () => setIsShow(false))
 
 	return (
