@@ -8,7 +8,8 @@ const theme: Theme = {
 	colors: {
 		bgColor: '#191923',
 		sidebarBgColor: '#20202a',
-		contentBgColor: '#1E1E28'
+		contentBgColor: '#1E1E28',
+		accentBgColor: '#24242F' 
 	}
 }
 

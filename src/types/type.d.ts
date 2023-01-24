@@ -3,7 +3,8 @@ declare module '@emotion/react' {
 		colors: {
 			bgColor: string
 			sidebarBgColor: string
-			contentBgColor: string
+			contentBgColor: string,
+			accentBgColor: string
 		}
 	}
 }

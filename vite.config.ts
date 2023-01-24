@@ -6,7 +6,11 @@ const pathResolver = (dirName: string) => path.resolve(__dirname, 'src', dirName
 
 // https://vitejs.dev/config/
 export default defineConfig({
-	plugins: [react()],
+	plugins: [
+		react({
+			jsxImportSource: '@emotion/react'
+		})
+	],
 	resolve: {
 		alias: {
 			'@/contexts': pathResolver('contexts'),
