@@ -12,8 +12,8 @@ export const MenuButtonStyle = styled('button')`
 	border: none;
 	background: none;
 	color: #eee;
-	rotate: ${(props: {isShow: boolean}) => (props.isShow ? 0 : '90deg')};
-	transition: .25s ease-out;
+	rotate: ${(props: { isShow: boolean }) => (props.isShow ? 0 : '90deg')};
+	transition: 0.25s ease-out;
 	cursor: pointer;
 `
 export const SidebarWrapper = styled('div')`
@@ -22,7 +22,7 @@ export const SidebarWrapper = styled('div')`
 `
 export const SidebarHeader = styled('div')`
 	height: 60px;
-	background: ${props => props.theme.colors.accentBgColor}
+	background: ${(props) => props.theme.colors.accentBgColor};
 `
 
 export default SidebarMenuStyle

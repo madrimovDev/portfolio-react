@@ -8,7 +8,7 @@ const RootLayout = () => {
 		<RootLayoutStyle.RootLayoutStyle>
 			<RootLayoutStyle.MainStyle>
 				<Sidebar />
-				<Content  />
+				<Content />
 			</RootLayoutStyle.MainStyle>
 		</RootLayoutStyle.RootLayoutStyle>
 	)

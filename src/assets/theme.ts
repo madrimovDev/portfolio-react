@@ -9,7 +9,7 @@ const theme: Theme = {
 		bgColor: '#191923',
 		sidebarBgColor: '#20202a',
 		contentBgColor: '#1E1E28',
-		accentBgColor: '#24242F' 
+		accentBgColor: '#24242F'
 	}
 }
 
