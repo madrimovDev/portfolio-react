@@ -6,7 +6,7 @@ export const LineRangeHeader = styled.div({
 	display: 'flex',
 	justifyContent: 'space-between',
 	color: '#8e8e8e',
-	marginBottom: 8,
+	marginBottom: 8
 })
 
 export const Line = styled.div(

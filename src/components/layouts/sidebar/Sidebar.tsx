@@ -5,6 +5,51 @@ import SidebarInfo from './SidebarInfo'
 import CircleRange from './circleRange/CircleRange'
 import LineRange from './lineRange/LineRange'
 
+const sidebarData = {
+	languages: [
+		{
+			title: 'Uzbek',
+			parcent: 100
+		},
+		{
+			title: 'Russian',
+			parcent: 40
+		},
+		{
+			title: 'English',
+			parcent: 30
+		}
+	],
+	hardSkills: [
+		{
+			name: 'HTML',
+			value: 90
+		},
+		{
+			name: 'CSS',
+			value: 94
+		},
+		{
+			name: 'JavaScript',
+			value: 90
+		},
+		{
+			name: 'TypeScript',
+			value: 70
+		},
+		{
+			name: 'ReactJS',
+			value: 90
+		}
+	],
+	softSkills: [
+		'Bootsrap, Tailwind, Ant-Design, Material-UI',
+		'Sass/Scss, PostCSS',
+		'GULP, Webpack',
+		'Git, Github'
+	]
+}
+
 const Sidebar: FC = () => {
 	return (
 		<SidebarStyle>
@@ -13,18 +58,13 @@ const Sidebar: FC = () => {
 				<SidebarInfo />
 				<Divider />
 				<div style={{ display: 'flex', justifyContent: 'space-evenly' }}>
-					<CircleRange
-						title='Uzbek'
-						parcent={100}
-					/>
-					<CircleRange
-						title='Russian'
-						parcent={40}
-					/>
-					<CircleRange
-						title='English'
-						parcent={20}
-					/>
+					{sidebarData.languages.map((data) => (
+						<CircleRange
+							key={data.title}
+							title={data.title}
+							parcent={data.parcent}
+						/>
+					))}
 				</div>
 				<Divider />
 				<div
@@ -33,23 +73,16 @@ const Sidebar: FC = () => {
 						flexDirection: 'column',
 						gap: 20
 					}}>
-					<LineRange
-						name='HTML'
-						value={95}
-					/>
-					<LineRange
-						name='CSS'
-						value={90}
-					/>
-					<LineRange
-						name='JavaScript'
-						value={80}
-					/>
-					<LineRange
-						name='ReactJS'
-						value={80}
-					/>
+					{sidebarData.hardSkills.map((data) => (
+						<LineRange
+							key={data.name}
+							name={data.name}
+							value={data.value}
+						/>
+					))}
 				</div>
+				<Divider />
+				
 			</SidebarWrapper>
 		</SidebarStyle>
 	)

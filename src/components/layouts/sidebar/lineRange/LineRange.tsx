@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import LineRangeStyle, {LineRangeHeader, Line, Range} from './LineRangeStyle'
+import LineRangeStyle, { LineRangeHeader, Line, Range } from './LineRangeStyle'
 
 interface LineRangeProps {
 	name: string
