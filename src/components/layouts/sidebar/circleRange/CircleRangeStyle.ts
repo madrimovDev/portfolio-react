@@ -13,10 +13,10 @@ export const Circle = styled('div')`
 	width: 50px;
 	height: 50px;
 	border-radius: 50%;
-	background: ${props => props.theme.colors.accentBgColor};
+	background: ${(props) => props.theme.colors.accentBgColor};
 	position: relative;
 	overflow: hidden;
-	&::after{
+	&::after {
 		content: '';
 		position: absolute;
 		top: 0;
@@ -31,7 +31,7 @@ export const CircleContent = styled('div')`
 	z-index: 1;
 	width: calc(100% - 8px);
 	height: calc(100% - 8px);
-	background: ${props => props.theme.colors.accentBgColor};
+	background: ${(props) => props.theme.colors.accentBgColor};
 	border-radius: 50%;
 	position: absolute;
 	top: 50%;

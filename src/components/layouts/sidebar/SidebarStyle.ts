@@ -4,12 +4,12 @@ const SidebarStyle = styled('aside')`
 	min-width: 300px;
 	height: 100%;
 	background: ${({ theme }) => theme.colors.sidebarBgColor};
-	box-shadow: 2px 0px 6px rgba(0,0,0, 0.1);
+	box-shadow: 2px 0px 6px rgba(0, 0, 0, 0.1);
 	z-index: 11;
 `
 
 export const SidebarHeaderStyle = styled('div')`
-	background: ${props => props.theme.colors.accentBgColor};
+	background: ${(props) => props.theme.colors.accentBgColor};
 	padding: 30px;
 	height: 235px;
 	display: flex;
@@ -37,7 +37,7 @@ export const SidebarWrapper = styled('div')`
 	padding: 20px;
 	display: flex;
 	flex-direction: column;
-	gap: 20px;
+	gap: 30px;
 `
 export const SidebarInfoStyle = styled('div')`
 	& li {
@@ -46,7 +46,7 @@ export const SidebarInfoStyle = styled('div')`
 		color: #eee;
 		font-size: 12px;
 		margin-bottom: 4px;
-		& span.name{
+		& span.name {
 		}
 
 		& span.value {
@@ -59,7 +59,7 @@ export const Divider = styled('div')`
 	width: 100%;
 	height: 1px;
 	border-radius: 10px;
-	background: rgba(255,255,255, 0.1);
+	background: rgba(255, 255, 255, 0.1);
 `
 
 export default SidebarStyle

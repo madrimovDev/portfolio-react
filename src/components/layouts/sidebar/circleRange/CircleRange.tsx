@@ -1,15 +1,14 @@
 import React, { FC } from 'react'
-import CircleRangeStyle, {Circle, CircleContent} from './CircleRangeStyle'
+import CircleRangeStyle, { Circle, CircleContent } from './CircleRangeStyle'
 
 interface CircleRangeProps {
-	title: string,
+	title: string
 	parcent: number
 }
 
-const CircleRange: FC<CircleRangeProps> = ({title, parcent}) => {
+const CircleRange: FC<CircleRangeProps> = ({ title, parcent }) => {
 	return (
 		<CircleRangeStyle>
-			
 			<Circle>
 				<CircleContent>
 					<p>{parcent}%</p>
