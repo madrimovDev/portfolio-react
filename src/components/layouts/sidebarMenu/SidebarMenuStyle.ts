@@ -4,7 +4,7 @@ const SidebarMenuStyle = styled('div')`
 	width: ${(props: { isShow: boolean }) => (props.isShow ? '300px' : '60px')};
 	height: 100%;
 	background: ${({ theme }) => theme.colors.sidebarBgColor};
-	transition: 0.85s ease-out;
+	transition: 0.25s ease-out;
 	position: relative;
 `
 export const MenuButtonStyle = styled('button')`
