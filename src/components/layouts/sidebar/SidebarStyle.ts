@@ -1,13 +1,17 @@
 import styled from '@emotion/styled'
 
 const SidebarStyle = styled('aside')`
+	overflow: hidden;
 	min-width: 300px;
 	height: 100%;
 	background: ${({ theme }) => theme.colors.sidebarBgColor};
 	box-shadow: 2px 0px 6px rgba(0, 0, 0, 0.1);
 	z-index: 11;
+	display: flex;
+	flex-direction: column;
 `
 export const SidebarHeaderStyle = styled('div')`
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 	background: ${(props) => props.theme.colors.accentBgColor};
 	padding: 30px;
 	height: 235px;
@@ -37,8 +41,6 @@ export const SidebarWrapper = styled('div')`
 	display: flex;
 	flex-direction: column;
 	gap: 30px;
-	border: 1px solid red;
-	overflow-y: scroll;
 `
 export const SidebarInfoStyle = styled('div')`
 	& li {
@@ -75,5 +77,31 @@ export const SoftSkills = styled.ul({
 		}
 	}
 })
+export const Button = styled.button({
+	color: '#8e8e8e',
+	display: 'inline-flex',
+	alignItems: 'center',
+	alignSelf: 'flex-start',
+	gap: 10,
+	padding: '5px 8px',
+	borderRadius: 4,
+	fontSize: 12,
+	border: 'none',
+	cursor: 'pointer',
+	background: 'none',
+	transitionDuration: '0.25s',
+	'&:hover': {
+		color: 'white'
+	}
+})
+export const SidebarFooterStyle = styled.div(
+	{
+		padding: '10px 20px',
+		boxShadow: '0 -2px 8px rgba(0,0,0,0.2)'
+	},
+	(props) => ({
+		background: props.theme.colors.accentBgColor
+	})
+)
 
 export default SidebarStyle

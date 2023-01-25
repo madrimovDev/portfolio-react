@@ -1,11 +1,13 @@
-import React, { FC, useLayoutEffect, useRef, useState } from 'react'
-import SidebarStyle, { Divider, SidebarWrapper, SoftSkills } from './SidebarStyle'
+import React, { FC } from 'react'
+import SidebarStyle, { Divider, SidebarWrapper, SoftSkills, Button } from './SidebarStyle'
 import SidebarHeader from './SidebarHeader'
 import SidebarInfo from './SidebarInfo'
 import CircleRange from './circleRange/CircleRange'
 import LineRange from './lineRange/LineRange'
 
 import CheckOutlined from '@ant-design/icons/CheckOutlined'
+import DownloadOutlined from '@ant-design/icons/DownloadOutlined'
+import SidebarFooter from './SidebarFooter'
 
 const sidebarData = {
 	languages: [
@@ -48,49 +50,58 @@ const sidebarData = {
 }
 
 const Sidebar: FC = () => {
-	const ref = useRef<HTMLDivElement>(null)
-
 	return (
 		<SidebarStyle>
 			<SidebarHeader />
-			<SidebarWrapper>
-				<SidebarInfo />
-				<Divider />
-				<div style={{ display: 'flex', justifyContent: 'space-evenly' }}>
-					{sidebarData.languages.map((data) => (
-						<CircleRange
-							key={data.title}
-							title={data.title}
-							parcent={data.parcent}
-						/>
-					))}
-				</div>
-				<Divider />
-				<div
-					style={{
-						display: 'flex',
-						flexDirection: 'column',
-						gap: 20
-					}}>
-					{sidebarData.hardSkills.map((data) => (
-						<LineRange
-							key={data.name}
-							name={data.name}
-							value={data.value}
-						/>
-					))}
-				</div>
-				<Divider />
-				<SoftSkills>
-					{sidebarData.softSkills.map((data) => (
-						<li key={data}>
-							<CheckOutlined />
-							<span className='name'>{data}</span>
-						</li>
-					))}
-				</SoftSkills>
-				<Divider />
-			</SidebarWrapper>
+			<div
+				style={{
+					flexGrow: 1,
+					overflow: 'auto'
+				}}>
+				<SidebarWrapper>
+					<SidebarInfo />
+					<Divider />
+					<div style={{ display: 'flex', justifyContent: 'space-evenly' }}>
+						{sidebarData.languages.map((data) => (
+							<CircleRange
+								key={data.title}
+								title={data.title}
+								parcent={data.parcent}
+							/>
+						))}
+					</div>
+					<Divider />
+					<div
+						style={{
+							display: 'flex',
+							flexDirection: 'column',
+							gap: 20
+						}}>
+						{sidebarData.hardSkills.map((data) => (
+							<LineRange
+								key={data.name}
+								name={data.name}
+								value={data.value}
+							/>
+						))}
+					</div>
+					<Divider />
+					<SoftSkills>
+						{sidebarData.softSkills.map((data) => (
+							<li key={data}>
+								<CheckOutlined />
+								<span className='name'>{data}</span>
+							</li>
+						))}
+					</SoftSkills>
+					<Divider />
+					<Button>
+						<DownloadOutlined />
+						Download CV
+					</Button>
+				</SidebarWrapper>
+			</div>
+			<SidebarFooter />
 		</SidebarStyle>
 	)
 }

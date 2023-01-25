@@ -13,6 +13,11 @@ const GlobalStyle = () => {
 					list-style: none;
 					text-decoration: none;
 					font-family: 'Open Sans', sans-serif;
+					scrollbar-width: none;
+					-ms-overflow-style: none;
+				}
+				*::-webkit-scrollbar {
+					display: none;
 				}
 			`}
 		/>
