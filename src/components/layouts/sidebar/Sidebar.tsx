@@ -4,10 +4,14 @@ import SidebarHeader from './SidebarHeader'
 import SidebarInfo from './SidebarInfo'
 import CircleRange from './circleRange/CircleRange'
 import LineRange from './lineRange/LineRange'
+import SidebarFooter from './SidebarFooter'
 
 import CheckOutlined from '@ant-design/icons/CheckOutlined'
 import DownloadOutlined from '@ant-design/icons/DownloadOutlined'
-import SidebarFooter from './SidebarFooter'
+import Linkedin from '@ant-design/icons/LinkedinFilled'
+import Facebook from '@ant-design/icons/FacebookFilled'
+import Github from '@ant-design/icons/GithubFilled'
+import Instagram from '@ant-design/icons/InstagramFilled'
 
 const sidebarData = {
 	languages: [
@@ -46,7 +50,25 @@ const sidebarData = {
 			value: 90
 		}
 	],
-	softSkills: ['Bootsrap, Tailwind, Ant-Design, Material-UI', 'Sass/Scss, PostCSS', 'GULP, Webpack', 'Git, Github']
+	softSkills: ['Bootsrap, Tailwind, Ant-Design, Material-UI', 'Sass/Scss, PostCSS', 'GULP, Webpack', 'Git, Github'],
+	socials: [
+		{
+			icon: <Linkedin />,
+			href: '/'
+		},
+		{
+			icon: <Github />,
+			href: '/'
+		},
+		{
+			icon: <Facebook />,
+			href: '/'
+		},
+		{
+			icon: <Instagram />,
+			href: '/'
+		}
+	]
 }
 
 const Sidebar: FC = () => {
@@ -101,7 +123,7 @@ const Sidebar: FC = () => {
 					</Button>
 				</SidebarWrapper>
 			</div>
-			<SidebarFooter />
+			<SidebarFooter socials={sidebarData.socials} />
 		</SidebarStyle>
 	)
 }

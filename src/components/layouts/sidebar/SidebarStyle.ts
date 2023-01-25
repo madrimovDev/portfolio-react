@@ -97,7 +97,13 @@ export const Button = styled.button({
 export const SidebarFooterStyle = styled.div(
 	{
 		padding: '10px 20px',
-		boxShadow: '0 -2px 8px rgba(0,0,0,0.2)'
+		boxShadow: '0 -2px 8px rgba(0,0,0,0.2)',
+		display: 'flex',
+		justifyContent: 'space-evenly',
+		a: {
+			color: '#8e8e8e',
+			fontSize: 18
+		}
 	},
 	(props) => ({
 		background: props.theme.colors.accentBgColor

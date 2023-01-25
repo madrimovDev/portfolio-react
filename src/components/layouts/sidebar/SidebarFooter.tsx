@@ -1,9 +1,21 @@
-import React from 'react'
+import React, { FC } from 'react'
 import { SidebarFooterStyle } from './SidebarStyle'
 
-const SidebarFooter = () => {
+interface SidebarFooterProps {
+	socials: { icon: JSX.Element; href: string }[]
+}
+
+const SidebarFooter: FC<SidebarFooterProps> = ({ socials }) => {
 	return (
-		<SidebarFooterStyle>SidebarFooter</SidebarFooterStyle>
+		<SidebarFooterStyle>
+			{socials.map((s, index) => (
+				<a
+					key={index}
+					href={s.href}>
+					{s.icon}
+				</a>
+			))}
+		</SidebarFooterStyle>
 	)
 }
 
