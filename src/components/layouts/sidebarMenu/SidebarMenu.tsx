@@ -1,17 +1,13 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef } from 'react'
 
-import SidebarMenuStyle, { MenuButtonStyle, SidebarHeader, SidebarWrapper } from './SidebarMenuStyle'
+import SidebarMenuStyle, { SidebarHeader, SidebarWrapper } from './SidebarMenuStyle'
+import SidebarButton from './SidebarButton'
 
-import MenuOutlined from '@ant-design/icons/MenuOutlined'
-import CloseOutlined from '@ant-design/icons/CloseOutlined'
-import { useOutsideClick } from '@/hooks'
+import { useMenu } from '@/hooks'
 
 const SidebarMenu = () => {
-	const [isShow, setIsShow] = useState<boolean>(false)
-	const toggleShow = () => setIsShow((prev) => !prev)
 	const ref = useRef<HTMLDivElement>(null)
-
-	useOutsideClick(ref, () => setIsShow(false))
+	const [isShow, toggleShow] = useMenu(ref)
 
 	return (
 		<SidebarMenuStyle
@@ -19,11 +15,10 @@ const SidebarMenu = () => {
 			isShow={isShow}>
 			<SidebarWrapper>
 				<SidebarHeader>
-					<MenuButtonStyle
+					<SidebarButton
 						isShow={isShow}
-						onClick={toggleShow}>
-						{isShow ? <CloseOutlined style={{ fontSize: 18 }} /> : <MenuOutlined style={{ fontSize: 18 }} />}
-					</MenuButtonStyle>
+						toggleShow={toggleShow}
+					/>
 				</SidebarHeader>
 			</SidebarWrapper>
 		</SidebarMenuStyle>

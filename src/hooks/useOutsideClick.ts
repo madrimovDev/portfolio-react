@@ -9,8 +9,7 @@ const useOutsideClick = <T extends HTMLElement = HTMLElement>(ref: RefObject<T>,
 			if (!el || el.contains((event?.target as Node) || null)) {
 				return
 			}
-
-			handler(event) // Call the handler only if the click is outside of the element passed.
+			handler(event)
 		}
 
 		document.addEventListener('mousedown', listener)
@@ -20,7 +19,7 @@ const useOutsideClick = <T extends HTMLElement = HTMLElement>(ref: RefObject<T>,
 			document.removeEventListener('mousedown', listener)
 			document.removeEventListener('touchstart', listener)
 		}
-	}, [ref, handler]) // Reload only if ref or handler changes
+	}, [ref, handler])
 }
 
 export default useOutsideClick
