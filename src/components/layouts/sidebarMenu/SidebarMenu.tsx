@@ -27,7 +27,7 @@ const menuList = [
 
 const SidebarMenu = () => {
 	const ref = useRef<HTMLDivElement>(null)
-	
+
 	const [isShow, toggleShow] = useMenu(ref)
 	const { pathname } = useLocation()
 

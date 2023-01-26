@@ -38,7 +38,7 @@ export const SidebarMenuList = styled.ul({
 
 export const ListItem = styled.li({}, (props: { index: number; isShow: boolean; active: boolean }) => ({
 	transition: '0.55s',
-	transitionDelay: props.index > 0 ? (props.index * 0.1) + 's' : '0s',
+	transitionDelay: props.index > 0 ? props.index * 0.1 + 's' : '0s',
 	opacity: props.isShow ? 1 : 0,
 	transform: `translateX(${props.isShow ? 0 : '30px'})`,
 	a: {
