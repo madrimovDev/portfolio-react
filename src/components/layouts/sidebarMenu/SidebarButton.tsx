@@ -4,11 +4,11 @@ import CloseOutlined from '@ant-design/icons/CloseOutlined'
 import MenuOutlined from '@ant-design/icons/MenuOutlined'
 
 interface SidebarButtonProps {
-	isShow: boolean,
+	isShow: boolean
 	toggleShow: () => void
 }
 
-const SidebarButton: FC<SidebarButtonProps> = ({isShow, toggleShow}) => {
+const SidebarButton: FC<SidebarButtonProps> = ({ isShow, toggleShow }) => {
 	return (
 		<MenuButtonStyle
 			isShow={isShow}

@@ -96,7 +96,7 @@ export const Button = styled.button({
 })
 export const SidebarFooterStyle = styled.div(
 	{
-		padding: '10px 20px',
+		padding: 20,
 		boxShadow: '0 -2px 8px rgba(0,0,0,0.2)',
 		display: 'flex',
 		justifyContent: 'space-evenly',
